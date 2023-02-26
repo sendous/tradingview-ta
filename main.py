@@ -44,7 +44,8 @@ with open('coins.csv', 'r') as file:
             analysis_15min = handler_15min.get_analysis().summary
             analysis_1min = handler_1min.get_analysis().summary
             if analysis_day['RECOMMENDATION'] == 'BUY':
-                print(f'{analysis_1min}','\n', f'{analysis_15min}')
+                print(f'{analysis_1min}')
+                print(f'{analysis_15min}')
                 print(f'{analysis_1H}')
                 print(f'{analysis_4H}')
                 print(f'{analysis_day} : {symbol}')
