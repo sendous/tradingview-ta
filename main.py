@@ -1,6 +1,6 @@
 import csv
 import tradingview_ta as ta
-
+import asyncio
 
 
 with open('coins.csv', 'r') as file:
@@ -43,12 +43,12 @@ with open('coins.csv', 'r') as file:
             analysis_1H = handler_1H.get_analysis().summary
             analysis_15min = handler_15min.get_analysis().summary
             analysis_1min = handler_1min.get_analysis().summary
-            if analysis_day['RECOMMENDATION'] == 'BUY':
-                print(f'{analysis_1min}')
-                print(f'{analysis_15min}')
-                print(f'{analysis_1H}')
-                print(f'{analysis_4H}')
-                print(f'{analysis_day} : {symbol}')
-                print('\n')
+            # if analysis_day['RECOMMENDATION'] == 'BUY':
+            print(f'{analysis_1min}')
+            print(f'{analysis_15min}')
+            print(f'{analysis_1H}')
+            print(f'{analysis_4H}')
+            print(f'{analysis_day} : {symbol}')
+            print('\n')
         except:
             pass
